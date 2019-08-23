@@ -1,0 +1,44 @@
+<!-- used BEM naming convention for css classes -->
+<!-- Block Element Modifier -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PreLoader</title>
+
+    <!-- main CSS -->
+    <link rel="stylesheet" href="css/loader_css.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onloadFunction()">
+    <section class="loading fade-in" id="loader">
+        <p>Good ideas takes time just like this loader</p>
+        <!-- <span class="loading__author">Welcome!</span> -->
+        <span class="loading__animation"></span>
+    </section>
+    <section id="welcome" style="display:none;" class="animate-bottom">
+        <p style="font-size: 3em;">Namaste!</p>
+    </section>
+
+    <script>
+        var sp;
+
+        function onloadFunction() {
+            sp = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("welcome").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

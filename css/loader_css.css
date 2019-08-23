@@ -1,0 +1,140 @@
+@font-face {
+    /* from https://www.freefonts.io */
+    font-family: shalinta;
+    src: url(../Shalinta.otf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #000;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.loading {
+    max-width: 100%;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading__author {
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: rgba(189, 189, 189, 1);
+    margin: 0.6rem 0 2rem 0;
+    display: block;
+}
+
+.loading__animation {
+    width: 35px;
+    height: 35px;
+    /* making the loader seats ono another line */
+    display: inline-block;
+    border: 5px solid rgba(189, 189, 189, 0.25);
+    border-left-color: rgba(255, 248, 126, 1);
+    border-top-color: rgba(255, 248, 126, 1);
+    /* making loader circle */
+    border-radius: 50%;
+    animation: rotate 700ms infinite linear;
+}
+
+/* good stuff starts here yes the ANIMATION */
+@keyframes rotate {
+    to {
+        /* 1turn = 360deg */
+        transform: rotate(1turn)
+    }
+}
+
+section {
+    color: #fff;
+}
+p {
+    letter-spacing: 1.3px;
+    font-size: 2em;
+    /* font-family: 'Yeseva One', cursive; */
+    font-family: shalinta;
+    color: rgba(255, 248, 126, 1);
+    
+}
+
+/* animation for fade in */
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#welcome {
+    display: none;
+}
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animatebottom;
+    animation-duration: 0.5s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
